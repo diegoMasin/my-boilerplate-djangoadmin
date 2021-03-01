@@ -21,8 +21,10 @@
   - pipenv shell
   - pip install -r requirements.txt (ou /requirements/local.txt)
   - criar banco de dados
-  - criar .env
+  - python manage.py makemigrations
+  - python manage.py migrate
   - code .
+  - criar .env
 - Configurar Debugging no VsCode, Ctrl+Shift+P, digite interpreter e escolha o interpretador python criado pelo pipenv(ou setting.json).
 ```
 
