@@ -271,5 +271,6 @@ my_boilerplate_django_admin/media/
 .pytest_cache/
 
 *Pipfile
+.vscode
 
 
