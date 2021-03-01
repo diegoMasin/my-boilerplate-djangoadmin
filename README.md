@@ -51,6 +51,10 @@
 - Execute: pre-commit install
 - Primeiro Commit.
 - Criando app core
+- Instalando adminLTE
+  - Execute: pip install django-adminlte-ui
+  - Configurando o settings base.py
+  - Execute: python manage.py migrate django_admin_settings
 ```
 
 **What you do when use this template git**
