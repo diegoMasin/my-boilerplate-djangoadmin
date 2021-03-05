@@ -1,7 +1,10 @@
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 from django.db.models import CharField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+
+from my_boilerplate_django_admin.core.mixins import BaseModel
 
 
 class User(AbstractUser):
@@ -20,3 +23,20 @@ class User(AbstractUser):
 
         """
         return reverse("users:detail", kwargs={"username": self.username})
+
+
+class Papeis(BaseModel):
+    titulo = models.CharField(
+        "Título",
+        max_length=20,
+    )
+
+    def __str__(self):
+        return self.titulo
+
+    class Meta:
+        verbose_name = "Papel"
+        verbose_name_plural = "Papéis"
+        ordering = [
+            "titulo",
+        ]
